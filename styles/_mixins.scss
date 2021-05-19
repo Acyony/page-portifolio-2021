@@ -1,0 +1,8 @@
+@mixin list-style {
+  list-style: none;
+}
+
+@mixin grid-template {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
