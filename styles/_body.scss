@@ -37,11 +37,6 @@ body {
   color: #40a0ea;
 }
 
-.projects-wrap {
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
-}
-
 h2 {
   font-size: 2em;
   font-weight: 700;
@@ -61,7 +56,16 @@ h2 {
   grid-column: 1 / 4;
   grid-row: 4 / 5;
   gap: 2rem;
-  margin-top: 4rem;
+}
+
+.hobby-title {
+  width: 25%;
+  @include centered-flex();
+  padding: 2rem 4rem;
+}
+
+.hobby > * {
+  margin-bottom: 2rem;
 }
 
 .project--1,
@@ -70,11 +74,15 @@ h2 {
 .project--4,
 .comments--1,
 .comments--2,
-.comments--3 {
+.comments--3,
+.hobby--1,
+.hobby--2,
+.hobby--3 {
   box-shadow: 20px 20px 60px rgb(167, 167, 167),
     -20px -20px 60px rgb(255, 255, 255);
 }
 
+.project--1 img,
 .project--2 img,
 .project--3 img,
 .project--4 img {
@@ -87,7 +95,10 @@ h2 {
 
 .comments--1 img,
 .comments--2 img,
-.comments--3 img {
+.comments--3 img,
+.hobby--1 img,
+.hobby--2 img,
+.hobby--3 img {
   border-radius: 50px;
   width: 10rem;
   margin-bottom: 3rem;
@@ -99,7 +110,10 @@ h2 {
 .project--4,
 .comments--1,
 .comments--2,
-.comments--3 {
+.comments--3,
+.hobby--1,
+.hobby--2,
+.hobby--3 {
   padding: 1.5rem 2rem;
 }
 
@@ -109,6 +123,14 @@ h2 {
   @include centered-flex();
   flex-direction: column;
 }
+
+.hobby--1,
+.hobby--2,
+.hobby--3 {
+  @include centered-flex();
+}
+
+
 
 
 // Contact Section
@@ -121,19 +143,29 @@ textarea {
   width: 100%;
   border-style: none;
   border: 1px solid dimgray;
-
 }
 
+.submit {
+  margin-top: -3rem;
+  @include centered-flex();
+}
 
+button {
+  padding: 1rem;
+  border-radius: 5px;
+  outline: none;
+  color: dimgray;
+  margin: 3rem 0;
+  font-size: 1.7rem;
+  cursor: pointer;
+  border-style: none;
+}
 
 .contact-wrap {
-//   display: flex;
-//   grid-column: 1 / 4;
-//   grid-row: 5 / 6;
   background-color: aliceblue;
-  margin-top: 4rem;
+  padding-bottom: 2rem;
   @include centered-flex();
-
+  height: 85vh;
 }
 
 .contact-column-left {
@@ -145,21 +177,18 @@ textarea {
 .contact-column-right {
   text-align: center;
   width: 40%;
-
 }
 
 .contact-column-right img {
   width: 50%;
 }
 
-
 // Footer
 
 footer {
-  grid-column: 1 / 4;
-  grid-row: 6 / 7;
   height: 15vh;
   margin-top: 4rem;
+  padding-top: 4rem;
   text-align: center;
 }
 
@@ -174,15 +203,13 @@ footer img:hover {
 }
 
 .section-line-style p {
-    width: 50%;
+  width: 50%;
 }
 
 .section-line-style,
 .footer-line-style {
   color: #4b4b4b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centered-flex();
   text-align: center;
   font-size: 1.6875rem;
   font-weight: 700;

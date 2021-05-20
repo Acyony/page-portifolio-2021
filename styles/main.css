@@ -56,11 +56,6 @@ body {
   color: #40a0ea;
 }
 
-.projects-wrap {
-  grid-column: 1/4;
-  grid-row: 3/4;
-}
-
 h2 {
   font-size: 2em;
   font-weight: 700;
@@ -82,7 +77,18 @@ h2 {
   grid-column: 1/4;
   grid-row: 4/5;
   gap: 2rem;
-  margin-top: 4rem;
+}
+
+.hobby-title {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+}
+
+.hobby > * {
+  margin-bottom: 2rem;
 }
 
 .project--1,
@@ -91,10 +97,14 @@ h2 {
 .project--4,
 .comments--1,
 .comments--2,
-.comments--3 {
+.comments--3,
+.hobby--1,
+.hobby--2,
+.hobby--3 {
   box-shadow: 20px 20px 60px #a7a7a7, -20px -20px 60px white;
 }
 
+.project--1 img,
 .project--2 img,
 .project--3 img,
 .project--4 img {
@@ -107,7 +117,10 @@ h2 {
 
 .comments--1 img,
 .comments--2 img,
-.comments--3 img {
+.comments--3 img,
+.hobby--1 img,
+.hobby--2 img,
+.hobby--3 img {
   border-radius: 50px;
   width: 10rem;
   margin-bottom: 3rem;
@@ -119,7 +132,10 @@ h2 {
 .project--4,
 .comments--1,
 .comments--2,
-.comments--3 {
+.comments--3,
+.hobby--1,
+.hobby--2,
+.hobby--3 {
   padding: 1.5rem 2rem;
 }
 
@@ -132,6 +148,14 @@ h2 {
   flex-direction: column;
 }
 
+.hobby--1,
+.hobby--2,
+.hobby--3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 input[type=text],
 input[type=email],
 input[type=email],
@@ -142,12 +166,31 @@ textarea {
   border: 1px solid dimgray;
 }
 
-.contact-wrap {
-  background-color: aliceblue;
-  margin-top: 4rem;
+.submit {
+  margin-top: -3rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 5px;
+  outline: none;
+  color: dimgray;
+  margin: 3rem 0;
+  font-size: 1.7rem;
+  cursor: pointer;
+  border-style: none;
+}
+
+.contact-wrap {
+  background-color: aliceblue;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
 }
 
 .contact-column-left {
@@ -168,10 +211,9 @@ textarea {
 }
 
 footer {
-  grid-column: 1/4;
-  grid-row: 6/7;
   height: 15vh;
   margin-top: 4rem;
+  padding-top: 4rem;
   text-align: center;
 }
 
@@ -193,8 +235,8 @@ footer img:hover {
 .footer-line-style {
   color: #4b4b4b;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: 1.6875rem;
   font-weight: 700;
@@ -247,13 +289,6 @@ span {
   main .about-me-image p {
     margin-bottom: 4rem;
   }
-  main .project--1 img {
-    width: 100%;
-  }
-  main .project--1 img {
-    height: 6vh;
-    margin-bottom: 3rem;
-  }
   main .comments {
     margin-bottom: 4rem;
   }
@@ -264,6 +299,11 @@ span {
   main .contact-column-right img {
     width: 60%;
   }
+  main .hobby--1,
+main .hobby--2,
+main .hobby--3 {
+    flex-direction: column;
+  }
 
   .footer-line-style:after {
     margin-right: 50px;
@@ -271,26 +311,36 @@ span {
   }
 }
 /* Tablet -481px - 768px*/
-.project--1 img {
-  height: 4vh;
-  margin-bottom: 3rem;
-}
-
-.section-line-style {
-  height: 35vh;
-  padding-top: 6rem;
-}
-
-/* Desktop */
-@media (min-width: 769px) {
-  .project--1 img {
-    height: 5vh;
-    margin-bottom: 3rem;
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    margin-top: 8rem;
+  }
+  main .submit {
+    margin-top: -3rem;
+  }
+  main .hobby--1,
+main .hobby--2,
+main .hobby--3 {
+    flex-direction: column;
   }
 
   .section-line-style {
+    height: 25vh;
+  }
+}
+/* Desktop */
+@media (min-width: 769px) {
+  .section-line-style {
     height: 35vh;
     padding-top: 6rem;
+  }
+}
+@media (min-width: 1490px) {
+  .hobby-wrap {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4rem;
   }
 }
 
