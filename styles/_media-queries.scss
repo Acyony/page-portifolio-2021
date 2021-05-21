@@ -1,13 +1,20 @@
 /* **********************Media Queries **********/
 
-@media (min-width: 0) and (max-width: 481px) {
+@media (min-width: 0) and (max-width: 350px) {
+  .contact-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 0) and (max-width: 480px) {
   header {
     height: 16vh;
   }
 
   main {
     .about-me-wrap {
-      height: 85vh;
+      height: 75vh;
     }
 
     .about-me-image {
@@ -25,10 +32,16 @@
     .contact-wrap {
       display: flex;
       flex-direction: column;
+      //   height: 95vh;
+    }
+
+    .contact-column-right {
+      width: 70%;
+      margin-top: 4rem;
     }
 
     .contact-column-right img {
-      width: 60%;
+      width: 40%;
     }
 
     .hobby--1,
@@ -38,15 +51,41 @@
     }
   }
 
+.section-line-style {
+  margin: 4rem 0;
+}
+
   .footer-line-style:after {
     margin-right: 50px;
     left: 10px;
   }
 }
 
+// Extra media queries between celphone and tablet
+
+@media (min-width: 481px) and (max-width: 990px) {
+    body {
+        padding: 4rem;
+      }
+
+  .contact-column-right {
+    width: 70%;
+    margin-top: 4rem;
+  }
+  .contact-wrap {
+    display: flex;
+    flex-direction: column;
+    // height: 95vh;
+  }
+}
+
 /* Tablet -481px - 768px*/
 
 @media (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding: 4rem;
+  }
+
   main {
     margin-top: 8rem;
 
@@ -68,7 +107,22 @@
 
 /* Desktop */
 
+@media (min-width: 684px) {
+    .about-me-wrap {
+        @include grid-template();
+      }
+}
+
+
 @media (min-width: 769px) {
+  body {
+    padding: 4rem;
+  }
+
+  .about-me-wrap {
+    margin-top: 9rem;
+  }
+
   .section-line-style {
     height: 35vh;
     padding-top: 6rem;
@@ -82,3 +136,32 @@
     gap: 4rem;
   }
 }
+
+
+
+
+
+@media (min-width: 991px) {
+  .contact-wrap {
+    height: 75vh;
+    padding: 0 10rem;
+  }
+
+  .contact-column-right {
+    padding-left: 4rem;
+    width: 50%;
+  }
+
+  .contact-column-left {
+    width: 40%;
+  }
+}
+
+
+@media (min-width: 1030px) {
+  .about-me-image {
+    // margin-left: 4rem;
+    text-align: center;
+  }
+}
+ 

@@ -14,7 +14,10 @@ body {
   font-size: 1.6rem;
   font-family: "Lexend", sans-serif;
   background-color: #e0e5ed;
-  padding: 4rem;
+}
+
+.navbar {
+  background-color: transparent !important;
 }
 
 .navigation-bar-items {
@@ -22,13 +25,8 @@ body {
 }
 
 .navbar-brand img {
-  width: 10rem;
-}
-
-.about-me-wrap {
-  display: flex;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 15rem;
+  margin: 0 2rem 0 2rem;
 }
 
 .about-me {
@@ -87,6 +85,10 @@ h2 {
   padding: 2rem 4rem;
 }
 
+.hobby-title {
+  text-shadow: 0px -2px 2px #d26c6c99;
+}
+
 .hobby > * {
   margin-bottom: 2rem;
 }
@@ -109,7 +111,7 @@ h2 {
 .project--3 img,
 .project--4 img {
   width: 100%;
-  height: 15vh;
+  height: 35vh;
   object-fit: cover;
   margin-bottom: 3rem;
   border-radius: 7px;
@@ -173,12 +175,17 @@ textarea {
   justify-content: center;
 }
 
+button:hover {
+  background-color: #cf9f80;
+  color: #ffffff;
+}
+
 button {
   padding: 1rem;
   border-radius: 5px;
   outline: none;
   color: dimgray;
-  margin: 3rem 0;
+  margin: 5rem 0;
   font-size: 1.7rem;
   cursor: pointer;
   border-style: none;
@@ -190,7 +197,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+}
+
+.contact-message h2 {
+  padding: 0rem 0 6rem 0;
+}
+
+.contact-message p {
+  padding: 2rem 4rem 2rem 0;
 }
 
 .contact-column-left {
@@ -231,6 +245,10 @@ footer img:hover {
   width: 50%;
 }
 
+.section-line-style p {
+  width: 50%;
+}
+
 .section-line-style,
 .footer-line-style {
   color: #4b4b4b;
@@ -240,7 +258,7 @@ footer img:hover {
   text-align: center;
   font-size: 1.6875rem;
   font-weight: 700;
-  margin: 0 1.625rem;
+  margin: 4rem 1.625rem 3rem 1.625rem;
 }
 
 .section-line-style::before,
@@ -275,13 +293,19 @@ span {
 }
 
 /* **********************Media Queries **********/
-@media (min-width: 0) and (max-width: 481px) {
+@media (min-width: 0) and (max-width: 350px) {
+  .contact-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 0) and (max-width: 480px) {
   header {
     height: 16vh;
   }
 
   main .about-me-wrap {
-    height: 85vh;
+    height: 75vh;
   }
   main .about-me-image {
     margin-bottom: 2rem;
@@ -296,8 +320,12 @@ span {
     display: flex;
     flex-direction: column;
   }
+  main .contact-column-right {
+    width: 70%;
+    margin-top: 4rem;
+  }
   main .contact-column-right img {
-    width: 60%;
+    width: 40%;
   }
   main .hobby--1,
 main .hobby--2,
@@ -305,13 +333,36 @@ main .hobby--3 {
     flex-direction: column;
   }
 
+  .section-line-style {
+    margin: 4rem 0;
+  }
+
   .footer-line-style:after {
     margin-right: 50px;
     left: 10px;
   }
 }
+@media (min-width: 481px) and (max-width: 990px) {
+  body {
+    padding: 4rem;
+  }
+
+  .contact-column-right {
+    width: 70%;
+    margin-top: 4rem;
+  }
+
+  .contact-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /* Tablet -481px - 768px*/
 @media (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding: 4rem;
+  }
+
   main {
     margin-top: 8rem;
   }
@@ -329,7 +380,21 @@ main .hobby--3 {
   }
 }
 /* Desktop */
+@media (min-width: 684px) {
+  .about-me-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
 @media (min-width: 769px) {
+  body {
+    padding: 4rem;
+  }
+
+  .about-me-wrap {
+    margin-top: 9rem;
+  }
+
   .section-line-style {
     height: 35vh;
     padding-top: 6rem;
@@ -341,6 +406,26 @@ main .hobby--3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 4rem;
+  }
+}
+@media (min-width: 991px) {
+  .contact-wrap {
+    height: 75vh;
+    padding: 0 10rem;
+  }
+
+  .contact-column-right {
+    padding-left: 4rem;
+    width: 50%;
+  }
+
+  .contact-column-left {
+    width: 40%;
+  }
+}
+@media (min-width: 1030px) {
+  .about-me-image {
+    text-align: center;
   }
 }
 
