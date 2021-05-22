@@ -13,7 +13,7 @@
 body {
   font-size: 1.6rem;
   font-family: "Lexend", sans-serif;
-  background-color: #e0e5ed;
+  background-color: #e0e0e0;
 }
 
 .navbar {
@@ -103,7 +103,8 @@ h2 {
 .hobby--1,
 .hobby--2,
 .hobby--3 {
-  box-shadow: 20px 20px 60px #a7a7a7, -20px -20px 60px white;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
 .project--1 img,
@@ -139,6 +140,15 @@ h2 {
 .hobby--2,
 .hobby--3 {
   padding: 1.5rem 2rem;
+}
+
+.fas {
+  color: #4b4b4b;
+  padding-left: 1rem;
+}
+
+.fas:hover {
+  color: #f783ac;
 }
 
 .comments--1,
@@ -192,7 +202,12 @@ button {
 }
 
 .contact-wrap {
-  background-color: aliceblue;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   padding-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -232,12 +247,12 @@ footer {
 }
 
 footer img {
-  width: 10rem;
+  width: 25rem;
   padding: 1rem;
 }
 
 footer img:hover {
-  background-color: #f7a59d;
+  background-color: #f1c2bee3;
   border-radius: 5px;
 }
 
@@ -277,7 +292,7 @@ footer img:hover {
 .section-line-style::after,
 .footer-line-style:before,
 .footer-line-style:after {
-  background-color: #f7a59d;
+  background-color: #f1c2bee3;
   content: "";
   display: inline-block;
   height: 2px;
@@ -300,6 +315,10 @@ span {
   }
 }
 @media (min-width: 0) and (max-width: 480px) {
+  body {
+    margin: 0 1rem;
+  }
+
   header {
     height: 16vh;
   }
