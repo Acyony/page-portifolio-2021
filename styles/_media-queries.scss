@@ -159,13 +159,7 @@
   }
 }
 
-@media (min-width: 1490px) {
-  .hobby-wrap {
-    display: flex;
-    @include grid-template();
-    gap: 4rem;
-  }
-}
+
 
 @media (min-width: 991px) {
   .contact-wrap {
@@ -185,7 +179,20 @@
 
 @media (min-width: 1030px) {
   .about-me-image {
-    // margin-left: 4rem;
     text-align: center;
+  }
+}
+
+@media (min-width: 1250px) {
+  .about-me {
+    padding: 4rem 20rem 2rem 0;
+  }
+}
+
+@media (min-width: 1490px) {
+  .hobby-wrap {
+    display: flex;
+    @include grid-template();
+    gap: 4rem;
   }
 }

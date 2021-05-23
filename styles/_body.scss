@@ -17,10 +17,6 @@ body {
   margin: 0 2rem 0 2rem;
 }
 
-.about-me-wrap {
-  //   display: flex;
-  //   @include grid-template();
-}
 
 .about-me {
   @include centered-flex();
