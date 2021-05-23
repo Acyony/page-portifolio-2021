@@ -8,7 +8,6 @@
 }
 
 @media (min-width: 0) and (max-width: 480px) {
-
   body {
     margin: 0 1rem;
   }
@@ -55,9 +54,9 @@
     }
   }
 
-.section-line-style {
-  margin: 4rem 0;
-}
+  .section-line-style {
+    margin: 4rem 0;
+  }
 
   .footer-line-style:after {
     margin-right: 50px;
@@ -68,9 +67,9 @@
 // Extra media queries between celphone and tablet
 
 @media (min-width: 481px) and (max-width: 990px) {
-    body {
-        padding: 4rem;
-      }
+  body {
+    padding: 4rem;
+  }
 
   .contact-column-right {
     width: 70%;
@@ -112,11 +111,10 @@
 /* Desktop */
 
 @media (min-width: 684px) {
-    .about-me-wrap {
-        @include grid-template();
-      }
+  .about-me-wrap {
+    @include grid-template();
+  }
 }
-
 
 @media (min-width: 769px) {
   body {
@@ -131,6 +129,34 @@
     height: 35vh;
     padding-top: 6rem;
   }
+
+  .project--1:hover,
+  .project--2:hover,
+  .project--3:hover,
+  .project--4:hover,
+  .comments--1:hover,
+  .comments--2:hover,
+  .comments--3:hover,
+  .hobby--1:hover,
+  .hobby--2:hover,
+  .hobby--3:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+
+  .project--1,
+  .project--2,
+  .project--3,
+  .project--4,
+  .comments--1,
+  .comments--2,
+  .comments--3,
+  .hobby--1,
+  .hobby--2,
+  .hobby--3 {
+    transform: scale(1);
+    transition: 1s;
+  }
 }
 
 @media (min-width: 1490px) {
@@ -140,10 +166,6 @@
     gap: 4rem;
   }
 }
-
-
-
-
 
 @media (min-width: 991px) {
   .contact-wrap {
@@ -161,11 +183,9 @@
   }
 }
 
-
 @media (min-width: 1030px) {
   .about-me-image {
     // margin-left: 4rem;
     text-align: center;
   }
 }
- 

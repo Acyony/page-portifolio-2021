@@ -112,6 +112,21 @@ h2 {
   margin-bottom: 3rem;
 }
 
+
+.comments p::before {
+  content: "\f10d ";
+  @include font-awesome();
+  color: #42bb8f;
+}
+
+.comments--1 p::after,
+.comments--2 p::after,
+.comments--3 p::after {
+  content: "\f10e ";
+  @include font-awesome();
+  color: #40a0ea;
+}
+
 .project--1,
 .project--2,
 .project--3,
@@ -123,6 +138,18 @@ h2 {
 .hobby--2,
 .hobby--3 {
   padding: 1.5rem 2rem;
+}
+
+
+
+
+.hobby a {
+  text-decoration: none;
+}
+
+
+.hobby a:hover {
+  color: #f783ac;
 }
 
 .fas {
