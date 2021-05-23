@@ -55,7 +55,7 @@ body {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -160,6 +160,16 @@ h2 {
   padding: 1.5rem 2rem;
 }
 
+.project span {
+  font-weight: 300;
+}
+
+.comments--1 p,
+.comments--2 p,
+.comments--3 p {
+  font-weight: 600;
+}
+
 .hobby a {
   text-decoration: none;
 }
@@ -228,12 +238,10 @@ button {
 }
 
 .contact-wrap {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
   padding-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -284,10 +292,7 @@ footer img:hover {
 
 .section-line-style p {
   width: 50%;
-}
-
-.section-line-style p {
-  width: 50%;
+  font-size: 1.8rem;
 }
 
 .section-line-style,
