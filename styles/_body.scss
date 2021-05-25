@@ -76,18 +76,6 @@ body {
   transform: scale(1.1)
 }
 
-// .about-me p::before {
-//   content: "\f10d ";
-//   @include font-awesome();
-//   color: #42bb8f;
-// }
-
-// .about-me p::after {
-//   content: "\f10e ";
-//   @include font-awesome();
-//   color: #40a0ea;
-// }
-
 
 .quote {
   height: 42px;
@@ -133,6 +121,10 @@ h2 {
   text-shadow: 0px -2px 2px #d26c6c99;
 }
 
+.hobby-description{
+  width: 70%;
+  }
+
 .hobby > * {
   margin-bottom: 2rem;
 }
@@ -173,20 +165,6 @@ h2 {
   margin-bottom: 3rem;
 }
 
-
-// .comments p::before {
-//   content: "\f10d ";
-//   @include font-awesome();
-//   color: #42bb8f;
-// }
-
-// .comments--1 p::after,
-// .comments--2 p::after,
-// .comments--3 p::after {
-//   content: "\f10e ";
-//   @include font-awesome();
-//   color: #40a0ea;
-// }
 
 .quote-comment {
   height: 25px;
