@@ -18,6 +18,8 @@
   main {
     .about-me-wrap {
       height: 75vh;
+    margin-top: 12rem;
+
     }
 
     .about-me-image {
@@ -78,7 +80,6 @@
   .contact-wrap {
     display: flex;
     flex-direction: column;
-    // height: 95vh;
   }
 }
 
@@ -90,7 +91,8 @@
   }
 
   main {
-    margin-top: 8rem;
+
+    // margin-top: 8rem;
 
     .submit {
       margin-top: -3rem;
@@ -158,8 +160,6 @@
     transition: 1s;
   }
 }
-
-
 
 @media (min-width: 991px) {
   .contact-wrap {

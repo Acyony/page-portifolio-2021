@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Lexend:wght@300&display=swap");
 * {
   margin: 0;
@@ -16,16 +15,12 @@ body {
   background-color: #e0e0e0;
 }
 
-.navbar {
-  background-color: transparent !important;
-}
-
 .navigation-bar-items {
   list-style: none;
 }
 
 .navbar-brand img {
-  width: 15rem;
+  height: 4rem;
   margin: 0 2rem 0 2rem;
 }
 
@@ -38,29 +33,68 @@ body {
   font-weight: 600;
 }
 
-.about-me p::before {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 800;
-  font-size: 3rem;
-  color: #42bb8f;
+.about-me-wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  background: linear-gradient(135deg, #fdbe6d 0%, #ff3b6d 100%);
+  padding: 5px;
+  margin: 30px auto 0 auto;
+  position: relative;
 }
 
-.about-me p::after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 800;
-  font-size: 3rem;
-  color: #40a0ea;
+.about-me-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background: linear-gradient(135deg, #facf59 0%, #fd3365 100%);
+  animation: gradient-animation 1.5s linear infinite;
+}
+
+@keyframes gradient-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.about-me-img {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  height: 240px;
+  width: 240px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 4px solid white;
+  transition: ease-in;
+  transition-duration: 0.1s;
+}
+
+.about-me-img:hover {
+  transform: scale(1.1);
+}
+
+.quote {
+  height: 42px;
+}
+
+.quote-left {
+  margin-right: 10px;
+  margin-top: -12px;
+}
+
+.quote-right {
+  margin-left: 10px;
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 700;
-}
-
-.about-me-image img {
-  width: 35rem;
 }
 
 .project {
@@ -118,9 +152,9 @@ h2 {
   border-radius: 7px;
 }
 
-.comments--1 img,
-.comments--2 img,
-.comments--3 img,
+.comments--1 .comment-image,
+.comments--2 .comment-image,
+.comments--3 .comment-image,
 .hobby--1 img,
 .hobby--2 img,
 .hobby--3 img {
@@ -129,22 +163,8 @@ h2 {
   margin-bottom: 3rem;
 }
 
-.comments p::before {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 800;
-  font-size: 3rem;
-  color: #42bb8f;
-}
-
-.comments--1 p::after,
-.comments--2 p::after,
-.comments--3 p::after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 800;
-  font-size: 3rem;
-  color: #40a0ea;
+.quote-comment {
+  height: 25px;
 }
 
 .project--1,
@@ -356,6 +376,7 @@ span {
 
   main .about-me-wrap {
     height: 75vh;
+    margin-top: 12rem;
   }
   main .about-me-image {
     margin-bottom: 2rem;
@@ -413,9 +434,6 @@ main .hobby--3 {
     padding: 4rem;
   }
 
-  main {
-    margin-top: 8rem;
-  }
   main .submit {
     margin-top: -3rem;
   }

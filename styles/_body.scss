@@ -2,10 +2,12 @@ body {
   font-size: 1.6rem;
   font-family: "Lexend", sans-serif;
   background-color: $secondary-color;
+  // background: url("../assests/bg.png") repeat;
+
 }
 
 .navbar {
-  background-color: transparent !important;
+  // background-color: transparent !important;
 }
 
 .navigation-bar-items {
@@ -13,7 +15,7 @@ body {
 }
 
 .navbar-brand img {
-  width: 15rem;
+  height: 4rem;
   margin: 0 2rem 0 2rem;
 }
 
@@ -25,16 +27,79 @@ body {
   font-weight: 600;
 }
 
-.about-me p::before {
-  content: "\f10d ";
-  @include font-awesome();
-  color: #42bb8f;
+
+.about-me-wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  background: linear-gradient(135deg, rgba(253,190,109,1) 0%, rgba(255,59,109,1) 100%); 
+  padding: 5px;
+  margin: 30px auto 0 auto;
+  position: relative;
+
 }
 
-.about-me p::after {
-  content: "\f10e ";
-  @include font-awesome();
-  color: #40a0ea;
+.about-me-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background: linear-gradient(135deg, rgb(250, 207, 89) 0%, rgb(253, 51, 101) 100%); 
+  animation: gradient-animation 1.5s linear infinite;
+}
+
+@keyframes gradient-animation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.about-me-img {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  height: 240px;
+  width: 240px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 4px solid white;
+  transition: ease-in;
+  transition-duration: 0.1s;
+}
+
+.about-me-img:hover {
+  transform: scale(1.1)
+}
+
+// .about-me p::before {
+//   content: "\f10d ";
+//   @include font-awesome();
+//   color: #42bb8f;
+// }
+
+// .about-me p::after {
+//   content: "\f10e ";
+//   @include font-awesome();
+//   color: #40a0ea;
+// }
+
+
+.quote {
+  height: 42px;
+}
+
+.quote-left {
+ margin-right: 10px;
+ margin-top: -12px;
+}
+
+.quote-right {
+ margin-left: 10px;
 }
 
 h2 {
@@ -42,9 +107,7 @@ h2 {
   font-weight: 700;
 }
 
-.about-me-image img {
-  width: 35rem;
-}
+
 
 .project {
   @include grid-template();
@@ -99,9 +162,9 @@ h2 {
   border-radius: 7px;
 }
 
-.comments--1 img,
-.comments--2 img,
-.comments--3 img,
+.comments--1 .comment-image,
+.comments--2 .comment-image,
+.comments--3 .comment-image,
 .hobby--1 img,
 .hobby--2 img,
 .hobby--3 img {
@@ -111,18 +174,22 @@ h2 {
 }
 
 
-.comments p::before {
-  content: "\f10d ";
-  @include font-awesome();
-  color: #42bb8f;
-}
+// .comments p::before {
+//   content: "\f10d ";
+//   @include font-awesome();
+//   color: #42bb8f;
+// }
 
-.comments--1 p::after,
-.comments--2 p::after,
-.comments--3 p::after {
-  content: "\f10e ";
-  @include font-awesome();
-  color: #40a0ea;
+// .comments--1 p::after,
+// .comments--2 p::after,
+// .comments--3 p::after {
+//   content: "\f10e ";
+//   @include font-awesome();
+//   color: #40a0ea;
+// }
+
+.quote-comment {
+  height: 25px;
 }
 
 .project--1,
