@@ -108,7 +108,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-column: 1/4;
   grid-row: 4/5;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .hobby-title {
@@ -121,6 +121,10 @@ h2 {
 
 .hobby-title {
   text-shadow: 0px -2px 2px #d26c6c99;
+}
+
+.hobby-description {
+  width: 70%;
 }
 
 .hobby > * {
