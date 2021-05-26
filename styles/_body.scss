@@ -279,6 +279,7 @@ button {
 .contact-column-left {
   @include centered-flex();
   // height: 55vh;
+  margin-top: 4rem;
   width: 60%;
 }
 
